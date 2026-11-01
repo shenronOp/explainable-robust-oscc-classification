@@ -1,0 +1,2 @@
+image,predicted_class,confidence,MD-OSCC,Normal,OSMF,PD-OSCC,WD-OSCC
+data\sample\orchid_sample.png,WD-OSCC,56.21,41.63,0.19,0.76,1.22,56.21

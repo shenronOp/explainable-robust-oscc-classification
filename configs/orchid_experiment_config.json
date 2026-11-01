@@ -1,0 +1,52 @@
+{
+  "project": "ORCHID OSCC Image Classification",
+  "model": "EfficientNet-B0",
+  "framework": "PyTorch",
+  "input_size": [
+    224,
+    224
+  ],
+  "num_classes": 5,
+  "class_mapping": {
+    "MD-OSCC": 0,
+    "Normal": 1,
+    "OSMF": 2,
+    "PD-OSCC": 3,
+    "WD-OSCC": 4
+  },
+  "random_seed": 42,
+  "split_method": "Patient-independent split",
+  "patient_counts": {
+    "train": 100,
+    "validation": 22,
+    "test": 24
+  },
+  "image_counts": {
+    "train": 9557,
+    "validation": 2248,
+    "test": 2594
+  },
+  "duplicate_audit": {
+    "original_images": 14705,
+    "conflicting_duplicate_records_excluded": 306,
+    "clean_images": 14399
+  },
+  "baseline_metrics": {
+    "accuracy": 0.7001,
+    "macro_f1": 0.7118,
+    "weighted_f1": 0.6964
+  },
+  "perturbed_metrics": {
+    "accuracy": 0.6611,
+    "macro_f1": 0.6703,
+    "weighted_f1": 0.6527
+  },
+  "robustness_test": "One randomized mild brightness, contrast, saturation, and hue perturbation per image",
+  "limitations": [
+    "Each class corresponds to a different hospital, confounding class and hospital effects.",
+    "The robustness test uses one randomized perturbation per image.",
+    "Grad-CAM visualizations are qualitative and do not establish clinical validity.",
+    "This is an academic experiment, not a clinically validated diagnostic system."
+  ],
+  "recorded_at_utc": "2026-10-26T08:47:56.223889+00:00"
+}

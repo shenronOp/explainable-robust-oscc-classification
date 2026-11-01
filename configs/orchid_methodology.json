@@ -1,0 +1,37 @@
+{
+  "dataset": "ORCHID OSCC classification dataset",
+  "original_image_count": 14705,
+  "conflicting_duplicate_records_excluded": 306,
+  "clean_image_count": 14399,
+  "split_strategy": "Patient-independent split, random seed 42",
+  "train_images": 9557,
+  "validation_images": 2248,
+  "test_images": 2594,
+  "train_patients": 100,
+  "validation_patients": 22,
+  "test_patients": 24,
+  "architecture": "EfficientNet-B0",
+  "input_resolution": "224x224",
+  "classes": [
+    "MD-OSCC",
+    "Normal",
+    "OSMF",
+    "PD-OSCC",
+    "WD-OSCC"
+  ],
+  "training_augmentation": [
+    "Random horizontal flip",
+    "Random rotation up to 10 degrees"
+  ],
+  "evaluation_preprocessing": [
+    "Resize to 224x224",
+    "Convert to tensor",
+    "ImageNet normalization"
+  ],
+  "interpretability": "Grad-CAM",
+  "robustness_experiment": "Mild brightness, contrast, saturation, and hue perturbation",
+  "baseline_accuracy": 0.7001,
+  "baseline_macro_f1": 0.7118,
+  "perturbed_accuracy": 0.6611,
+  "perturbed_macro_f1": 0.6703
+}

@@ -218,3 +218,41 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# =====================================
+# ORCHID OSCC PROJECT
+# =====================================
+
+# Original and processed datasets
+data/raw/
+data/processed/
+data/external/
+
+# Temporary model checkpoints
+*_recovery.pth
+*.ckpt
+*.pt
+
+# Experiment outputs
+outputs/
+runs/
+wandb/
+lightning_logs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Local environment variables
+.env.*
+!.env.example
+
+# Sample dataset images
+data/sample/
+
+# Python cache
+__pycache__/
+*.py[cod]
